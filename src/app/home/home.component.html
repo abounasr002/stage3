@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECMConsulting - Gestion des enregistrements</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="header">
+  <div class="header-container">
+    <a href="login.html">
+      <img src="../ECMLogo.png" alt="Logo ECM" class="logo">
+    </a>
+    <div class="branding">
+      <h1 class="company-name">INTERFACE EDS-FILNET</h1>
+    </div>
+  </div>
+</header>
+
+
+
+  <main class="main-content">
+    <div class="content-container">
+      <h2 class="section-title">Gestion des enregistrements</h2>
+      
+      <form (ngSubmit)="creerEnregistrement()" class="record-form">
+        <div class="form-grid">
+          <div class="form-group" *ngFor="let field of fields">
+            <label [for]="field.name" class="form-label">{{ field.label }}</label>
+            <div class="input-with-icon">
+              <input
+                [id]="field.name"
+                [type]="field.type"
+                [(ngModel)]="nouveau[field.name]"
+                [name]="field.name"
+                [placeholder]="'Enter ' + field.label.toLowerCase()"
+                [required]="!field.nullable"
+                class="form-input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">
+            {{ editantId ? 'Modifier' : 'Créer' }}
+          </button>
+          <button *ngIf="editantId" type="button" class="btn btn-secondary" (click)="annulerEdition()">
+            Annuler
+          </button>
+        </div>
+      </form>
+
+      <section class="record-list-section">
+        <h3 class="section-subtitle">Enregistrements existants</h3>
+
+        <div *ngIf="enregistrements.length === 0" class="empty-state">
+          <p>Aucun enregistrement trouvé</p>
+        </div>
+
+        <ul class="record-list" *ngIf="enregistrements.length > 0">
+          <li *ngFor="let r of enregistrements" class="record-item">
+            <div class="record-details">
+              <span class="record-property">{{ r.PROPERTY }}</span>
+              <span class="record-separator">—</span>
+              <span class="record-object-type">{{ r.OBJECTTYPE }}</span>
+            </div>
+            <div class="record-actions">
+              <button (click)="editerEnregistrement(r)" class="btn btn-edit">
+                ✎ Modifier
+              </button>
+              <button (click)="supprimerEnregistrement(r._id)" class="btn btn-danger">
+                × Supprimer
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+       
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 ECMConsulting. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

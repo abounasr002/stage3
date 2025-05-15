@@ -1,0 +1,240 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 0;
+  position: relative; 
+}
+
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; 
+  height: 60px;
+}
+
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.company-name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.main-content {
+  padding: 2rem;
+}
+
+.content-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #003366;
+}
+
+.record-form {
+  margin-bottom: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.form-input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: #0066cc;
+}
+
+
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #005bb5;
+}
+
+.btn-secondary {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #ccc;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.btn-edit {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #e67e22;
+}
+
+/* Record List */
+.record-list-section {
+  margin-top: 2rem;
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.empty-state {
+  padding: 1rem;
+  text-align: center;
+  color: #888;
+}
+
+.record-list {
+  list-style: none;
+  padding: 0;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.record-details {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.record-property {
+  font-weight: 500;
+}
+
+.record-separator {
+  color: #999;
+}
+
+.record-object-type {
+  font-style: italic;
+  color: #666;
+}
+
+.record-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #252424;
+  color: white;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.footer-content {
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  text-align: center;
+}

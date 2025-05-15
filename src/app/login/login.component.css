@@ -1,0 +1,304 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background-color: #003366;
+  padding: 1rem 0;
+  color: #ffffff;
+    position: relative; 
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+}
+
+.company-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.language-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 8px 15px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background-color: white;
+  color: #003366;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: rgb(151, 197, 204);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: #003366;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.fas {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.forgot-password {
+  color: #003366;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #002244;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-footer a {
+  color: #003366;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #202020;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-nav {
+  margin-top: 10px;
+}
+
+.footer-link {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+}
+
+.version {
+  color: #888;
+}
+
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .login-card {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .footer-link {
+    margin: 5px 0;
+  }
+}
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+}
+
+/* .logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+} */
+
+
+
+
+
+.logo {
+
+  height: 4px; 
+  width: 4000px; 
+  
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    height: 30px; 
+  }
+}
+
+
+.logo:hover {
+  transform: scale(1.05); 
+  opacity: 0.9;
+}
+
+.header-with-text-logo .logo {
+  height: 50px; 
+  object-fit: contain; 
+}
